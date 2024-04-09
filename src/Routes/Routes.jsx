@@ -9,6 +9,8 @@ import UpdateProfile from "../Pages/UpdateProfile";
 import Contact from "../Pages/Contact";
 import Footer from "../Pages/Footer";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
+import About from "../Components/About";
+import Agents from "../Components/Agents";
 
   const router = createBrowserRouter([
     {
@@ -38,6 +40,14 @@ import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
         {
             path: "/footer",
             element: <Footer></Footer>
+        },
+        {
+          path: "/about",
+          element: <About></About>
+        },
+        {
+          path: "/agents",
+          element: <Agents></Agents>
         }
       ]
     },
