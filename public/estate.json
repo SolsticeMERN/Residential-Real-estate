@@ -1,0 +1,54 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Modern Loft Apartment",
+      "segment_name": "Residential",
+      "description": "Spacious loft apartment with contemporary design and stunning views of the city skyline.",
+      "price": "$300,000",
+      "status": "sale",
+      "image_url": "https://example.com/apartment1.jpg",
+      "area": "2000 sq ft",
+      "location": "Downtown",
+      "facilities": ["living room", "swimming pool", "kitchen"],
+      "view_property_button": "https://example.com/view_property?id=1"
+    },
+    {
+      "id": 2,
+      "estate_title": "Cozy Suburban Home",
+      "segment_name": "Residential",
+      "description": "Charming suburban home with a beautiful garden, perfect for a family.",
+      "price": "$250,000",
+      "status": "sale",
+      "image_url": "https://example.com/home1.jpg",
+      "area": "2500 sq ft",
+      "location": "Suburbia",
+      "facilities": ["living room", "backyard", "garage"],
+      "view_property_button": "https://example.com/view_property?id=2"
+    },
+    {
+      "id": 3,
+      "estate_title": "Luxury Beachfront Villa",
+      "segment_name": "Residential",
+      "description": "Exquisite beachfront villa with private access to the beach and luxurious amenities.",
+      "price": "$1,500,000",
+      "status": "sale",
+      "image_url": "https://example.com/villa1.jpg",
+      "area": "5000 sq ft",
+      "location": "Beachfront",
+      "facilities": ["living room", "swimming pool", "ocean view"],
+      "view_property_button": "https://example.com/view_property?id=3"
+    },
+    {
+      "id": 4,
+      "estate_title": "Spacious Urban Condo",
+      "segment_name": "Residential",
+      "description": "Modern condo located in the heart of the city, with access to top-notch amenities.",
+      "price": "$400,000",
+      "status": "rent",
+      "image_url": "https://example.com/condo1.jpg",
+      "area": "1500 sq ft",
+      "location": "City Center",
+      "facilities": ["living room", "gym", "rooftop terrace"],
+      "view_property_button": "https://example.com/view_property?id=4"
+    }
+  ]
