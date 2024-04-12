@@ -8,10 +8,15 @@ const Register = () => {
 
    const HandleRegister = e =>{
     e.preventDefault()
-    const name = e.target.name.value
-    const email = e.target.email.value
-    const password = e.target.password.value
-    console.log(name, email, password);
+    const formData = new FormData(e.target);
+
+    // Extract values from the FormData object
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const image = formData.get("image");
+    const password = formData.get("password");
+  
+    console.log(name, image, email, password);
 
     if (password.length < 6){
         setRegisterError('Password must be at least 6 characters')
@@ -39,13 +44,16 @@ const Register = () => {
           icon: "success"
         });
         e.target.reset()
-        Navigate('/')
-        updateProfile(result.user, {
-            displayName: name,
-        })
-        .then(() => {
-             console.log("Updated Profile");
-        })
+        Navigate('/profile')
+        // updateProfile(result.user, {
+        //     displayName: name,
+        //     photoURL: image,
+        // })
+        // .then(() => {
+        //      console.log("Updated Profile");
+        //      SetProfileUpdate(true)
+        // })
+      })
         .catch(error => {
              console.log(error);
              Swal.fire({
@@ -54,7 +62,6 @@ const Register = () => {
               icon: "error"
             });
          })
-    })
     .catch(error => {
         console.log(error.message);
         setRegisterError(error.message)
@@ -274,7 +281,7 @@ import {useContext, useState } from "react";
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
-import { updateProfile } from "firebase/auth";
 import { AuthContext } from "../Providers/AuthProvider";
 import Swal from 'sweetalert2'
+
 

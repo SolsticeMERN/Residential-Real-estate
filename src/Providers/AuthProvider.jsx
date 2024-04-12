@@ -13,6 +13,7 @@ import {
   const googleProvider = new GoogleAuthProvider();
   
   const AuthProvider = ({ children }) => {
+    const [profileUpdate, setProfileUpdate] = useState(false)
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
   
@@ -44,8 +45,8 @@ import {
       return () => {
         unsubscribe();
       };
-    }, []);
-    const AuthInfo = { user, loading, CreateUser, googleSignIn, signInUser, SignOutUser };
+    }, [profileUpdate]);
+    const AuthInfo = { user, loading, setProfileUpdate, CreateUser, googleSignIn, signInUser, SignOutUser };
     return (
       <AuthContext.Provider value={AuthInfo}>{children}</AuthContext.Provider>
     );

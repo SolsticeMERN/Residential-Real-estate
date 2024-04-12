@@ -53,12 +53,12 @@ import UserProfile from "../Pages/UserProfile";
         },
         {
           path: "/details/:id",
-          element: <EstateDetails></EstateDetails>,
+          element: <PrivateRoutes><EstateDetails></EstateDetails></PrivateRoutes>,
           loader: () => fetch('/public/estate.json')
         },
         {
           path: "/userprofile",
-          element: <UserProfile></UserProfile>
+          element: <PrivateRoutes><UserProfile></UserProfile></PrivateRoutes>
         }
       ]
     },

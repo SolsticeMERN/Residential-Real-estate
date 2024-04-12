@@ -11,8 +11,8 @@ const UserProfile = () => {
 
   return (
     <div className="rounded-3xl pt-10">
-      <div className="max-w-sm mx-auto bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-        <div className="border-b px-4 pb-6">
+      <div className="max-w-lg p-10 mx-auto bg-[#F4F7FF] rounded-lg overflow-hidden shadow-lg">
+        <div className="border bg-white p-4 rounded-3xl pb-6">
           <div className="text-center my-4">
             <div className="h-20 w-20 rounded-full border-white dark:border-gray-800 mx-auto my-10">
               <img
@@ -22,10 +22,10 @@ const UserProfile = () => {
               />
             </div>
             <div className="py-6">
-              <h3 className="font-bold mb-5 text-2xl text-gray-800 dark:text-white">
+              <h3 className="font-bold mb-5 text-2xl text-gray-800 ">
                 Name: {user.displayName || "N/A"}
               </h3>
-              <div className="inline-flex text-gray-700 dark:text-gray-300 items-center">
+              <div className="inline-flex text-gray-700 items-center">
                 Email: {user.email || "N/A"}
               </div>
             </div>

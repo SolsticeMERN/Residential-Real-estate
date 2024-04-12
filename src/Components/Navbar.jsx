@@ -63,7 +63,7 @@ const Navbar = () => {
         </div>
         <Link to='/' className="flex justify-center items-center cursor-pointer gap-2">
         <img className="w-10" src={logo} alt="" />
-        <a className="text-2xl font-bold text-[#0dcdbd]">Find House</a>
+        <span className="text-2xl font-bold text-[#0dcdbd]">Find House</span>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -76,6 +76,7 @@ const Navbar = () => {
               tabIndex={0}
               role="button"
               className="btn btn-ghost btn-circle avatar"
+              title={user.displayName}
             >
               <div className="w-10 rounded-full">
                 {
