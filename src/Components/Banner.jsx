@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 const Banner = () => {
     return (
-        <Swiper navigation={true} modules={[Navigation]} className="mySwiper rounded-2xl w-full md:h-[550px]">
+        <Swiper navigation={true} modules={[Navigation]} className="mySwiper rounded-2xl overflow-hidden w-full md:h-[550px]">
         <SwiperSlide><img src={banner1} alt="" /></SwiperSlide>
         <SwiperSlide><img src={banner2} alt="" /></SwiperSlide>
         <SwiperSlide><img src={banner3} alt="" /></SwiperSlide>

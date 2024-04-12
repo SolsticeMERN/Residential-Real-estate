@@ -11,6 +11,7 @@ import Footer from "../Pages/Footer";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 import About from "../Components/About";
 import Agents from "../Components/Agents";
+import EstateDetails from "../Components/EstateDetails";
 
   const router = createBrowserRouter([
     {
@@ -48,6 +49,11 @@ import Agents from "../Components/Agents";
         {
           path: "/agents",
           element: <Agents></Agents>
+        },
+        {
+          path: "/details/:id",
+          element: <EstateDetails></EstateDetails>,
+          loader: () => fetch('/public/estate.json')
         }
       ]
     },

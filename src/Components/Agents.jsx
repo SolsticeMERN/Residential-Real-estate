@@ -7,7 +7,7 @@ const Agents = () => {
             </div>
     <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-10">
         <div
-            className="border-r hover:scale-105 border-b border-l border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
+            className="border-r hover:scale-105 shadow-2xl border-b border-l border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
             <img src="https://demo.graygrids.com/themes/estatebit/assets/img/team/team-01.jpg" className="w-full mb-3"/>
             <div className="p-4 pt-2 text-center">
                 <div className="mb-2">
@@ -19,7 +19,7 @@ const Agents = () => {
             </div>
         </div>
         <div
-            className="border-r hover:scale-105 border-b border-l border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
+            className="border-r hover:scale-105 shadow-2xl border-b border-l border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
             <img src="https://demo.graygrids.com/themes/estatebit/assets/img/team/team-02.jpg" className="w-full mb-3"/>
             <div className="p-4 pt-2 text-center">
                 <div className="mb-2">
@@ -31,7 +31,7 @@ const Agents = () => {
             </div>
         </div>
         <div
-            className="border-r hover:scale-105 border-b border-l border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
+            className="border-r hover:scale-105 shadow-2xl border-b border-l border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
             <img src="https://demo.graygrids.com/themes/estatebit/assets/img/team/team-03.jpg" className="w-full mb-3"/>
             <div className="p-4 pt-2 text-center">
                 <div className="mb-2">
@@ -43,7 +43,7 @@ const Agents = () => {
             </div>
         </div>
         <div
-            className="border-r hover:scale-105 border-b border-l border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
+            className="border-r hover:scale-105 shadow-2xl border-b border-l border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
             <img src="https://demo.graygrids.com/themes/estatebit/assets/img/team/team-04.jpg" className="w-full mb-3"/>
             <div className="p-4 pt-2 text-center">
                 <div className="mb-2">
