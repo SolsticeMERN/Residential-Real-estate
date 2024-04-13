@@ -23,7 +23,7 @@ const EstateDetails = () => {
   return (
     <div>
         <Helmet>
-            <title>{estate_title}</title>
+            <title>{estate_title} - Find house</title>
             <meta name="description" content={description} />
         </Helmet>
       <section className="mb-40 ">

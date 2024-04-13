@@ -69,7 +69,7 @@ const Login = () => {
   return (
     <div>
       <Helmet>
-        <title>Find House | Login</title>
+        <title>Login - Find House</title>
       </Helmet>
       <div className="font-[sans-serif]  text-[#333]">
         <div className="min-h-screen flex fle-col items-center justify-center py-6 px-4">

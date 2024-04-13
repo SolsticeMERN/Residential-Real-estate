@@ -4,7 +4,7 @@ const Contact = () => {
     return (
         <div>
             <Helmet>
-                <title>Contact</title>
+                <title>Contact - Find House</title>
                 <meta name="description" content="Contact page" />
             </Helmet>
             <div>

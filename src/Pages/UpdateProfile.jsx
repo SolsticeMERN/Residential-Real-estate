@@ -43,7 +43,7 @@ const UpdateProfile = () => {
     return (
         <div>
             <Helmet>
-                <title>Find House | Update Profile</title>
+                <title>Update Profile - Find House</title>
             </Helmet>
             <section className="bg-[#F4F7FF] py-20 rounded-3xl lg:py-[120px]">
                 <div className="container rounded-3xl">

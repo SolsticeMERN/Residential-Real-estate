@@ -58,7 +58,7 @@ const Register = () => {
     return (
         <div>
           <Helmet>
-            <title>Find House | Register</title>
+            <title>Register - Find House</title>
             <meta name="description" content="Description of Register" />
           </Helmet>
             <div className="font-[sans-serif] text-[#333]">
