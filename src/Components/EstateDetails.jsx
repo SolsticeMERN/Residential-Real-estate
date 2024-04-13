@@ -22,6 +22,10 @@ const EstateDetails = () => {
 
   return (
     <div>
+        <Helmet>
+            <title>{estate_title}</title>
+            <meta name="description" content={description} />
+        </Helmet>
       <section className="mb-40 ">
         {/* Hero Section */}
         <div
@@ -275,4 +279,5 @@ import { FaTwitter } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import Map from "./Map";
+import { Helmet } from "react-helmet-async";
 

@@ -6,16 +6,44 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? "bg-[#0dcdbd] text-white" : "text-lg"
+          }
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/profile">UpdateProfile</NavLink>
+        <NavLink
+          to="/profile"
+          className={({ isActive }) =>
+            isActive ? "bg-[#0dcdbd] text-white" : "text-lg"
+          }
+        >
+          UpdateProfile
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/userprofile">UserProfile</NavLink>
+        <NavLink
+          to="/userprofile"
+          className={({ isActive }) =>
+            isActive ? "bg-[#0dcdbd] text-white" : "text-lg"
+          }
+        >
+          UserProfile
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/contact">Contact</NavLink>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            isActive ? "bg-[#0dcdbd] text-white" : "text-lg"
+          }
+        >
+          Contact
+        </NavLink>
       </li>
     </>
   );
@@ -56,18 +84,23 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 gap-3 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 gap-3 rounded-box text-lg font-semibold w-52"
           >
             {navLinks}
           </ul>
         </div>
-        <Link to='/' className="flex justify-center items-center cursor-pointer gap-2">
-        <img className="w-10" src={logo} alt="" />
-        <span className="text-2xl font-bold text-[#0dcdbd]">Find House</span>
+        <Link
+          to="/"
+          className="flex justify-center items-center cursor-pointer gap-2"
+        >
+          <img className="w-10" src={logo} alt="" />
+          <span className="text-2xl font-bold text-[#0dcdbd]">Find House</span>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal gap-5 px-1">{navLinks}</ul>
+        <ul className="menu menu-horizontal gap-5 px-1 text-lg font-semibold">
+          {navLinks}
+        </ul>
       </div>
       <div className="navbar-end">
         {user ? (
@@ -79,19 +112,17 @@ const Navbar = () => {
               title={user.displayName}
             >
               <div className="w-10 rounded-full">
-                {
-                  user.photoURL? (
-                    <img
-                      alt="Tailwind CSS Navbar component"
-                      src={user.photoURL}
-                    />
-                  ) : (
-                    <img
-                      alt="Tailwind CSS Navbar component"
-                      src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                    />
-                  )
-                }
+                {user.photoURL ? (
+                  <img
+                    alt="Tailwind CSS Navbar component"
+                    src={user.photoURL}
+                  />
+                ) : (
+                  <img
+                    alt="Tailwind CSS Navbar component"
+                    src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  />
+                )}
               </div>
             </div>
             <ul
@@ -102,12 +133,14 @@ const Navbar = () => {
                 <h2>{user.displayName}</h2>
               </li>
               <li>
-                <a onClick={handleLogOut}>Logout</a>
+                <a className="bg-red-600 text-white" onClick={handleLogOut}>
+                  Logout
+                </a>
               </li>
             </ul>
           </div>
         ) : (
-          <Link to="/login" className="btn">
+          <Link to="/login" className="btn bg-[#0dcdbd] text-white">
             Login
           </Link>
         )}
@@ -117,4 +150,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
-import logo from '../../src/assets/logo.jpeg'
+import logo from "../../src/assets/logo.jpeg";

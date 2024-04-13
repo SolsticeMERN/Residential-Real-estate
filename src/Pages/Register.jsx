@@ -57,6 +57,10 @@ const Register = () => {
 
     return (
         <div>
+          <Helmet>
+            <title>Find House | Register</title>
+            <meta name="description" content="Description of Register" />
+          </Helmet>
             <div className="font-[sans-serif] text-[#333]">
       <div className="min-h-screen flex fle-col items-center justify-center py-6 px-4">
         <div className="grid md:grid-cols-2 items-center gap-4 max-w-7xl w-full">
@@ -252,5 +256,6 @@ import { AuthContext } from "../Providers/AuthProvider";
 import Swal from 'sweetalert2';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 

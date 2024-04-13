@@ -1,6 +1,6 @@
-
 const Agents = () => {
     return (
+        <div>
         <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-10">
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" className="text-center text-5xl text-[#0dcdbd] p-10 font-bold">
                 Our Agents
@@ -58,6 +58,7 @@ const Agents = () => {
 
     </div>
 </div>
+        </div>
     );
 };
 

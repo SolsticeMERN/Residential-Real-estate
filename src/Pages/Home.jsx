@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import About from "../Components/About";
 import Agents from "../Components/Agents";
 import Banner from "../Components/Banner";
@@ -9,6 +10,9 @@ AOS.init();
 const Home = () => {
     return (
         <div>
+            <Helmet>
+            <title>Find House | Home</title>
+            </Helmet>
             <Banner></Banner>
             <Estate></Estate>
             <Agents></Agents>

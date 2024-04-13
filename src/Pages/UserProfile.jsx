@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const UserProfile = () => {
   const { user } = useContext(AuthContext);
@@ -19,7 +20,11 @@ const UserProfile = () => {
   }
 
   return (
-    <div className="rounded-3xl pt-10">
+    <div>
+      <Helmet>
+        <title>Find House | Profile</title>
+      </Helmet>
+      <div className="rounded-3xl pt-10">
       <div className="max-w-lg p-10 mx-auto bg-[#F4F7FF] rounded-lg overflow-hidden shadow-lg">
         <div className="border bg-white p-4 rounded-3xl pb-6">
           <div className="text-center my-4">
@@ -44,6 +49,7 @@ const UserProfile = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

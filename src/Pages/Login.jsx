@@ -68,6 +68,9 @@ const Login = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Find House | Login</title>
+      </Helmet>
       <div className="font-[sans-serif]  text-[#333]">
         <div className="min-h-screen flex fle-col items-center justify-center py-6 px-4">
           <div className="grid md:grid-cols-2 items-center gap-4 max-w-7xl w-full">
@@ -259,4 +262,5 @@ import { FaRegEyeSlash } from "react-icons/fa6";
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
-import Swal from "sweetalert2";
+import Swal from "sweetalert2";import { Helmet } from "react-helmet-async";
+
