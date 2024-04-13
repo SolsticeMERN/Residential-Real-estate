@@ -24,13 +24,22 @@ const UpdateProfile = () => {
         })
         .then(() => {
             console.log("Updated Profile");
+            Swal.fire({
+                title: "Registration Complete",
+                text: "You clicked the button!",
+                icon: "success"
+              });
             setProfileUpdate(true);
             navigate("/");
             e.target.reset();
         })
         .catch(error => {
             console.error("Error updating profile:", error.message);
-            // Provide user feedback here, e.g., display an error message
+            Swal.fire({
+                title: "Something went wrong",
+                text: "You clicked the button!",
+                icon: "error"
+              });
         });
     }
     return (
@@ -136,3 +145,4 @@ const UpdateProfile = () => {
 };
 
 export default UpdateProfile;
+import Swal from 'sweetalert2'
