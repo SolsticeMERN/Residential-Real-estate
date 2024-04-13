@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const UpdateProfile = () => {
     const { user, setProfileUpdate } = useContext(AuthContext);
@@ -14,7 +16,7 @@ const UpdateProfile = () => {
         const image = formData.get("image");
 
         if (!name || !image) {
-            console.error("Please provide both name and image");
+            toast.error("Please provide both name and image");
             return;
         }
 
@@ -23,21 +25,17 @@ const UpdateProfile = () => {
             photoURL: image,
         })
         .then(() => {
-            console.log("Updated Profile");
             Swal.fire({
-                title: "Registration Complete",
-                text: "You clicked the button!",
+                title: "Updated Profile",
                 icon: "success"
               });
             setProfileUpdate(true);
             navigate("/");
             e.target.reset();
         })
-        .catch(error => {
-            console.error("Error updating profile:", error.message);
+        .catch(() => {
             Swal.fire({
                 title: "Something went wrong",
-                text: "You clicked the button!",
                 icon: "error"
               });
         });
@@ -139,6 +137,7 @@ const UpdateProfile = () => {
                         </div>
                     </div>
                 </div>
+                <ToastContainer />
             </section>
         </div>
     );

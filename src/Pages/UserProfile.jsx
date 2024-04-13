@@ -3,10 +3,19 @@ import { AuthContext } from "../Providers/AuthProvider";
 
 const UserProfile = () => {
   const { user } = useContext(AuthContext);
-
-  // Check if user exists before accessing its properties
   if (!user) {
-    return <div>Loading...</div>; // You can render a loading indicator or handle the absence of user differently
+    return (
+      <div>
+        <span className="loading loading-spinner text-primary"></span>
+        <span className="loading loading-spinner text-secondary"></span>
+        <span className="loading loading-spinner text-accent"></span>
+        <span className="loading loading-spinner text-neutral"></span>
+        <span className="loading loading-spinner text-info"></span>
+        <span className="loading loading-spinner text-success"></span>
+        <span className="loading loading-spinner text-warning"></span>
+        <span className="loading loading-spinner text-error"></span>
+      </div>
+    ); 
   }
 
   return (
@@ -17,7 +26,10 @@ const UserProfile = () => {
             <div className="h-20 w-20 rounded-full border-white dark:border-gray-800 mx-auto my-10">
               <img
                 alt={user.displayName || "User Photo"}
-                src={user.photoURL || "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"}
+                src={
+                  user.photoURL ||
+                  "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                }
                 className="h-20 w-20 rounded-full"
               />
             </div>

@@ -1,7 +1,6 @@
 const Register = () => {
     const [ShowPassword, SetShowPassword] = useState(false)
-    const [register, setRegister] = useState('')
-    const [registerError, setRegisterError] = useState('')
+  
     
     const {CreateUser} = useContext(AuthContext)
     const Navigate = useNavigate()
@@ -11,15 +10,17 @@ const Register = () => {
     const formData = new FormData(e.target);
 
     // Extract values from the FormData object
-    const name = formData.get("name");
     const email = formData.get("email");
-    const image = formData.get("image");
     const password = formData.get("password");
   
-    console.log(name, image, email, password);
-
     if (password.length < 6){
-        setRegisterError('Password must be at least 6 characters')
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+        footer: '<a href="#">Password must be at least 6 characters</a>'
+      });
+
         return;
     }
     else if (!/^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(password)){
@@ -35,44 +36,22 @@ const Register = () => {
      
 
     CreateUser(email, password)
-    .then(result => {
-        console.log(result.user);
-        setRegister('Sucessfully signed in')
-        Swal.fire({
-          title: "Registration Complete",
-          text: "You clicked the button!",
-          icon: "success"
-        });
-        e.target.reset()
-        Navigate('/profile')
-        // updateProfile(result.user, {
-        //     displayName: name,
-        //     photoURL: image,
-        // })
-        // .then(() => {
-        //      console.log("Updated Profile");
-        //      SetProfileUpdate(true)
-        // })
-      })
-        .catch(error => {
-             console.log(error);
-             Swal.fire({
-              title: "Something went wrong",
-              text: "You clicked the button!",
-              icon: "error"
+            .then(() => {
+                toast.success("Successfully Registered");
+                Swal.fire({
+                  title: "Successfully Registered",
+                  icon: "success"
+              });
+                e.target.reset();
+                Navigate('/profile');
+            })
+            .catch(() => {
+                Swal.fire({
+                    title: "Something went wrong",
+                    icon: "error"
+                });
             });
-         })
-    .catch(error => {
-        console.log(error.message);
-        setRegisterError(error.message)
-        Swal.fire({
-          title: "Something went wrong",
-          text: "You clicked the button!",
-          icon: "error"
-        });
-    })
-
-   }
+    };
 
 
 
@@ -247,20 +226,8 @@ const Register = () => {
                   Sign In
                 </Link>
               </p>
+              <ToastContainer />
             </form>
-            {registerError && (
-              <div
-                className="bg-red-100 border-l-4 border-red-500 text-red-700 px-4 py-3"
-                role="alert"
-              >
-                <p className="font-bold">{registerError}</p>
-              </div>
-            )}
-            {register && (
-              <p className="text-center text-green-500 text-2xl font-bold">
-                {register}
-              </p>
-            )}
           </div>
           <div className="lg:h-[400px] md:h-[300px] max-md:mt-10">
             <img
@@ -282,6 +249,8 @@ import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 

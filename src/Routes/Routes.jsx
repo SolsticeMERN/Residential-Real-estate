@@ -13,11 +13,13 @@ import About from "../Components/About";
 import Agents from "../Components/Agents";
 import EstateDetails from "../Components/EstateDetails";
 import UserProfile from "../Pages/UserProfile";
+import ErrorPage from "../Pages/ErrorPage";
 
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
             path: "/",

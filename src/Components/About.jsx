@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div className="dark:bg-gray-100 dark:text-gray-800 rounded-2xl pb-5">
-      <div className="text-center text-5xl p-10 text-[#0dcdbd] font-bold">About Us</div>
+      <div data-aos="fade-down" data-aos-duration="1000" className="text-center text-5xl p-10 text-[#0dcdbd] font-bold">About Us</div>
       <div className="flex pt-5 px-6 md:px-20 mb-5 items-center justify-center bg-hero overflow-hidden">
         <div className="flex flex-col  gap-6 md:flex-row items-center max-w-8xl">
           <div className="w-full md:w-1/2 lg:pr-32">
@@ -22,8 +22,8 @@ const About = () => {
               </button>
             </div>
           </div>
-          <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-            <img src="https://demo.graygrids.com/themes/estatebit/assets/img/about/img-2.jpg" />
+          <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100" className="w-full md:w-1/2 flex  justify-center md:justify-end">
+            <img className="rounded-2xl" src="https://demo.graygrids.com/themes/estatebit/assets/img/about/img-2.jpg" />
           </div>
         </div>
       </div>

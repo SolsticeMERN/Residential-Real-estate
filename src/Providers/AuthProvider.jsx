@@ -1,4 +1,5 @@
 import {
+  GithubAuthProvider,
   GoogleAuthProvider,
     createUserWithEmailAndPassword,
     onAuthStateChanged,
@@ -11,6 +12,7 @@ import {
   
   export const AuthContext = createContext(null);
   const googleProvider = new GoogleAuthProvider();
+  const gitHubProvider = new GithubAuthProvider();
   
   const AuthProvider = ({ children }) => {
     const [profileUpdate, setProfileUpdate] = useState(false)
@@ -30,6 +32,10 @@ import {
       setLoading(true);
       return signInWithPopup(auth, googleProvider)
     }
+    const gitHubSignIn = () => {
+      setLoading(true);
+      return signInWithPopup(auth, gitHubProvider)
+    }
   
     const SignOutUser = () => {
       setLoading(true);
@@ -46,7 +52,7 @@ import {
         unsubscribe();
       };
     }, [profileUpdate]);
-    const AuthInfo = { user, loading, setProfileUpdate, CreateUser, googleSignIn, signInUser, SignOutUser };
+    const AuthInfo = { user, loading, setProfileUpdate, CreateUser, googleSignIn, gitHubSignIn, signInUser, SignOutUser };
     return (
       <AuthContext.Provider value={AuthInfo}>{children}</AuthContext.Provider>
     );
