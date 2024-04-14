@@ -11,6 +11,7 @@ const Login = () => {
 
     signInUser(email, password)
       .then(() => {
+        toast.success("signed in")
         Swal.fire({
           title: "Sucessfully signed in",
           icon: "success",
@@ -30,6 +31,7 @@ const Login = () => {
   const handleWithGoogleLoginIn = () => {
     googleSignIn()
       .then(() => {
+        toast.success("signed in")
         Swal.fire({
           title: "Sucessfully signed in",
           icon: "success",
@@ -240,6 +242,7 @@ const Login = () => {
                     </svg>
                   </button>
                 </div>
+                <ToastContainer />
               </form>
             </div>
             <div className="lg:h-[400px] md:h-[300px] max-md:mt-10">
@@ -262,5 +265,8 @@ import { FaRegEyeSlash } from "react-icons/fa6";
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
-import Swal from "sweetalert2";import { Helmet } from "react-helmet-async";
+import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 

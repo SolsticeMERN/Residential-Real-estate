@@ -1,14 +1,13 @@
-import { useEffect, useState } from "react";
-import EstateCard from "./EstateCard";
+import { useEffect, useState } from 'react';
+import EstateCard from './EstateCard';
 
-const Estate = () => {
-
-    const [estates, setEstate] = useState([]);
+const Estates = () => {
+    const [estates, setEstates] = useState([]);
 
     useEffect(() => {
-        fetch('/public/estate.json')
+        fetch('/Property.json')
         .then(res => res.json())
-        .then(data => setEstate(data))
+        .then(data => setEstates(data))
     }, [])
 
     return (
@@ -27,4 +26,5 @@ const Estate = () => {
     );
 };
 
-export default Estate;
+
+export default Estates;

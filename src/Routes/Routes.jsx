@@ -14,6 +14,7 @@ import Agents from "../Components/Agents";
 import EstateDetails from "../Components/EstateDetails";
 import UserProfile from "../Pages/UserProfile";
 import ErrorPage from "../Pages/ErrorPage";
+import Estates from "../Components/Estates";
 
   const router = createBrowserRouter([
     {
@@ -56,11 +57,16 @@ import ErrorPage from "../Pages/ErrorPage";
         {
           path: "/details/:id",
           element: <PrivateRoutes><EstateDetails></EstateDetails></PrivateRoutes>,
-          loader: () => fetch('/public/estate.json')
+          loader: () => fetch('/Property.json')
         },
         {
           path: "/userprofile",
           element: <PrivateRoutes><UserProfile></UserProfile></PrivateRoutes>
+        },
+        {
+          path: "/estates",
+          loader: () => fetch('/Property.json'),
+          element: <Estates></Estates>,
         }
       ]
     },
