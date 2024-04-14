@@ -22,7 +22,7 @@ const Login = () => {
       })
       .catch(() => {
         Swal.fire({
-          title: "Something went wrong",
+          title: "Your email and password are incorrect",
           icon: "error",
         });
       });

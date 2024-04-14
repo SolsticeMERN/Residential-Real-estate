@@ -8,9 +8,6 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/"
-          className={({ isActive }) =>
-            isActive ? "bg-[#0dcdbd] text-white" : "text-lg"
-          }
         >
           Home
         </NavLink>
@@ -18,29 +15,20 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/profile"
-          className={({ isActive }) =>
-            isActive ? "bg-[#0dcdbd] text-white" : "text-lg"
-          }
         >
           UpdateProfile
         </NavLink>
       </li>
       <li>
         <NavLink
-          to="/userprofile"
-          className={({ isActive }) =>
-            isActive ? "bg-[#0dcdbd] text-white" : "text-lg"
-          }
+          to="/gallery"
         >
-          UserProfile
+          Gallery
         </NavLink>
       </li>
       <li>
         <NavLink
           to="/contact"
-          className={({ isActive }) =>
-            isActive ? "bg-[#0dcdbd] text-white" : "text-lg"
-          }
         >
           Contact
         </NavLink>

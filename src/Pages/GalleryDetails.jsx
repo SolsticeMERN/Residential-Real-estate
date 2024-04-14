@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
-import { useLoaderData, useParams } from "react-router-dom";
-
-const EstateDetails = () => {
-  const estateDetails = useLoaderData();
+import { Link, useLoaderData, useParams } from "react-router-dom";
+import { FcOk } from "react-icons/fc";
+import { Helmet } from "react-helmet-async";
+const GalleryDetails = () => {
+  const galleryDetails = useLoaderData();
   const { id } = useParams();
   const IntId = parseInt(id);
-  const estate = estateDetails.find((e) => e.id === IntId);
+  const gallery = galleryDetails.find((e) => e.id === IntId);
 
   const {
     estate_title,
@@ -17,14 +17,13 @@ const EstateDetails = () => {
     area,
     location,
     facilities,
-  } = estate;
+  } = gallery;
 
   return (
     <div>
-        <Helmet>
-            <title>{estate_title} - Find house</title>
-            <meta name="description" content={description} />
-        </Helmet>
+      <Helmet>
+        <title> {estate_title} - Find house</title>
+      </Helmet>
       <section className="mb-40 ">
         {/* Hero Section */}
         <div
@@ -39,16 +38,16 @@ const EstateDetails = () => {
             <div className="flex h-full items-center justify-center">
               <div className="px-6 text-center text-white md:px-12">
                 <h1 className="mt-2 mb-16 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl">
-                  PROPERTIES
+                  Property
                 </h1>
                 <Link
-                  to="/"
+                  to="/gallery"
                   type="button"
                   className="rounded border-2 mb-5 border-neutral-50 px-[46px] pt-[14px] pb-[12px] text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-100 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                 >
-                  Home
+                 Back to Gallery
                 </Link>
               </div>
             </div>
@@ -178,9 +177,6 @@ const EstateDetails = () => {
                 </div>
               </section>
               {/* map */}
-              <div>
-              <Map></Map>
-              </div>
             </div>
           </div>
           {/* contact form */}
@@ -269,14 +265,11 @@ const EstateDetails = () => {
   );
 };
 
-export default EstateDetails;
+export default GalleryDetails;
 import banner from "../../src/assets/banner1.jpeg";
-import { FcOk } from "react-icons/fc";
 import { FcPhone } from "react-icons/fc";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import Map from "./Map";
-import { Helmet } from "react-helmet-async";
 

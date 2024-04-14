@@ -12,9 +12,9 @@ import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 import About from "../Components/About";
 import Agents from "../Components/Agents";
 import EstateDetails from "../Components/EstateDetails";
-import UserProfile from "../Pages/UserProfile";
 import ErrorPage from "../Pages/ErrorPage";
-import Estates from "../Components/Estates";
+import Gallery from "../Pages/Gallery";
+import GalleryDetails from "../Pages/GalleryDetails";
 
   const router = createBrowserRouter([
     {
@@ -60,13 +60,13 @@ import Estates from "../Components/Estates";
           loader: () => fetch('/Property.json')
         },
         {
-          path: "/userprofile",
-          element: <PrivateRoutes><UserProfile></UserProfile></PrivateRoutes>
+          path: "/gallery",
+          element: <PrivateRoutes><Gallery></Gallery></PrivateRoutes>,
         },
         {
-          path: "/estates",
-          loader: () => fetch('/Property.json'),
-          element: <Estates></Estates>,
+          path: "/galleryDetails/:id",
+          element: <PrivateRoutes><GalleryDetails></GalleryDetails></PrivateRoutes>,
+          loader: () => fetch('/Property.json')
         }
       ]
     },
