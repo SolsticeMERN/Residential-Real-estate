@@ -169,7 +169,7 @@ const Login = () => {
                 <div className="!mt-10">
                   <button
                     type="submit"
-                    className="w-full shadow-xl py-2.5 px-4 text-sm font-semibold rounded text-white bg-[#333] hover:bg-black focus:outline-none"
+                    className="w-full shadow-xl py-2.5 px-4 text-sm font-semibold rounded-2xl text-white bg-blue-600 hover:bg-blue-700 focus:outline-none"
                   >
                     Log in
                   </button>
