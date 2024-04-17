@@ -9,6 +9,8 @@ const UpdateProfile = () => {
     const { user, setProfileUpdate } = useContext(AuthContext);
     const navigate = useNavigate();
 
+    console.log(user);
+
     const handleUpdateProfile = e => {
         e.preventDefault();
         const formData = new FormData(e.target);
@@ -70,7 +72,9 @@ const UpdateProfile = () => {
                                         <input
                                             type="text"
                                             name="name"
-                                            placeholder="Name"
+                                            placeholder={user.
+                                                displayName
+                                                }
                                             className="
                                                 w-full
                                                 rounded-md
@@ -91,7 +95,7 @@ const UpdateProfile = () => {
                                         <input
                                             type="text"
                                             name="image"
-                                            placeholder="photoUrl"
+                                            placeholder={user.photoURL}
                                             className="
                                                 w-full
                                                 rounded-md
